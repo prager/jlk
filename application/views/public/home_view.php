@@ -105,7 +105,6 @@
           <?php echo form_open('public_ctl/msg');?>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Full Name:</label>
                 <?php $name_arr = array(
 				'name'  => 'name',
 				'id' => 'name',
@@ -123,7 +122,6 @@
             </div>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Phone Number:</label>
                 <?php $phone_arr = array(
 				'name'  => 'phone',
 				'id' => 'phone',
@@ -139,7 +137,6 @@
             </div>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Email Address:</label>
                 <?php $email_arr = array(
 				'name'  => 'email',
 				'id' => 'email',
@@ -155,7 +152,6 @@
             </div>
             <div class="control-group form-group">
               <div class="controls">
-                <label>Message:</label>
                 <?php $text_arr = array(
 				'name'  => 'msg',
 				'id' => 'msg',
