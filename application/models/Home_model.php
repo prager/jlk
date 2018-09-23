@@ -8,7 +8,8 @@ class Home_model extends CI_Model {
 	public function send_msg($param) {
 		
 		$recipient = 'jank@jlkconsulting.info';
-		$message = "Message from Fair-Ball:\n\n Name: " . $param['name'] . "\n\n" . "Message:\n\n" . $param['message'];
+		$message = "Message from JLK:\n\n Name: " . $param['name'] . "\n\n" . "Phone:\n\n" . $param['phone'] . "\n\n" . 
+		"Message:\n\n" . $param['message'];
 		mail($recipient, 'Msg from JLK', $message);
 		
 		$msg_arr = array(

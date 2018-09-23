@@ -12,7 +12,9 @@ class Public_ctl extends CI_Controller {
 	
 	public function msg() {
 	    $this->form_validation->set_rules('name', 'name', 'callback_validate_msg');
-	    $this->form_validation->run();
+	    if($this->form_validation->run()) {
+	     $this->Home_model->send_msg($this->msg_param);
+	     }
 	    $this->load->view('public/home_view', $this->msg);
 	    /*if($this->form_validation->run()) {
 	        $this->Home_model->send_msg($this->msg_param);
@@ -44,7 +46,8 @@ class Public_ctl extends CI_Controller {
 	        return FALSE;
 	    }
 	    else {
-	        $this->msg = array('msg' => '<strong>Your message was sent. Thank you!</strong><br>');
+	        $this->msg = array('msg' => '<strong>Your message was sent. Thank you! Reload home page by clicking 
+            <a href="http://jlkconsulting.info">here</a></strong><br>');
 	        return TRUE;
 	    }
 	}
