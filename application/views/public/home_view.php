@@ -47,8 +47,8 @@
             <li>MySQL database</li>
             <li>LAMP Stack (Linux OS, Apache Web Server, MySQL Database, PHP environment)</li>
           </ul>
-          <p>The above are the mostly used technologies by JLK Consulting. However, it doesn't mean that we will not use alternatives if customer desires
-          a different option.</p>
+          <p>The above are the mostly used technologies by JLK Consulting. However, it doesn't mean that we will not use alternatives if 
+          customer desires different options.</p>
         </div>
         <div class="col-lg-6">
           <img class="img-fluid rounded" src="<?php echo base_url() ;?>assets/img/app1.jpg" alt="">
@@ -62,35 +62,39 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj1.png" alt=""></a>
+            <a href="http://fair-ball.com"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj1.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Fair-Ball</a>
+                <a href="http://fair-ball.com">Fair-Ball</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-            </div>
+              <p class="card-text">Fair-Ball solves the issues of dramas that plague many youth baseball teams.
+              It is not only baseball stats program, but using unique formulas also creates ideal team lineups for upcoming games.</p>
+		    </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj2.png" alt=""></a>
+            <a href="http://arrleb.org"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj2.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">ARRL EB Section</a>
+                <a href="http://arrleb.org">ARRL EB Section</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
+              <p class="card-text">This is a portal for ARRL Eeast Bay Section that provides information for Ham Radio Amateurs
+              in San Francisco East Bay area.</p>
+              
+              </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj3.png" alt=""></a>
+            <a href="http://birotaryengine.com"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj3.png" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Birotary Engine</a>
+                <a href="http://birotaryengine.com">Birotary Engine</a>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-            </div>
+              <p class="card-text">Birotary Engine is a unique invention by a brilliant engineer from Czech Republic. It involves
+              a true revolution in internal combustion engine designs.</p>
+			</div>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Public_ctl extends CI_Controller {
 
+    var $msg_param;
+    var $msg;
 	
 	public function index() {
 		$this->load->view('public/home_view', array('msg' => ''));
@@ -10,18 +12,20 @@ class Public_ctl extends CI_Controller {
 	
 	public function msg() {
 	    $this->form_validation->set_rules('name', 'name', 'callback_validate_msg');
-	    if($this->form_validation->run()) {
+	    $this->form_validation->run();
+	    $this->load->view('public/home_view', $this->msg);
+	    /*if($this->form_validation->run()) {
 	        $this->Home_model->send_msg($this->msg_param);
-	        $this->load->view('public/home_view', array('msg' => '<strong>Your message was sent. Thank you!</strong><br>'));
+	        $this->load->view('public/home_view', $this->msg);
 	    }
 	    else {
 	        
-	        $this->load->view('public/home_view', array('msg' => '<strong>There was an error sending your message. Please,
-                try again later or call 925-691-7522. Thank you!</strong><br>'));
-	    }
+	        $this->load->view('public/home_view', $this->msg);
+	    }*/
 	}
 	
 	public function validate_msg() {
+	    $param = array();
 	    $param['name'] = $this->input->post('name');
 	    $param['email'] = $this->input->post('email');
 	    $param['phone'] = $this->input->post('phone');
@@ -29,11 +33,18 @@ class Public_ctl extends CI_Controller {
 	    
 	    $this->msg_param = $param;
 	    
-	    if($param['name'] == '' || valid_email($param['email']) != TRUE || $param['phone'] == '' || $param['message'] == '') {
-	        $this->form_validation->set_message('validate_msg', 'Please, fill all information below. Thank you!');
+	    if($param['name'] == '' || $param['phone'] == '' || $param['message'] == '') {
+	        $this->form_validation->set_message('validate_msg', 'Please, fill correctly all information below. Thank you!');
+	        $this->msg = array('msg' => '<strong>There was an error sending your message. Please,
+                try again later or call 925-691-7522. Thank you!</strong><br>');
+	        return FALSE;
+	    }
+	    elseif(!(filter_var($param['email'], FILTER_VALIDATE_EMAIL))) {
+	        $this->msg = array('msg' => '<strong>Please, enter a valid email. Thank you!</strong><br>');
 	        return FALSE;
 	    }
 	    else {
+	        $this->msg = array('msg' => '<strong>Your message was sent. Thank you!</strong><br>');
 	        return TRUE;
 	    }
 	}
