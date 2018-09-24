@@ -11,23 +11,23 @@
     <title>JLK Consulting</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url() ;?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ;?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo base_url() ;?>/assets/css/modern-business.css" rel="stylesheet">
+    <link href="<?php echo base_url() ;?>assets/css/styles.css" rel="stylesheet">
 
   </head>
 
-  <body>
+   
     <div class="container">
       <div class="jumbotron">
   <h1 class="display-4">JLK Consulting</h1>
   <p class="lead">Web applications development</p>
   <hr class="my-4">
+  <a href="#contact" class="btn btn-light">Contact the JLK Team</a>
 
 </div>
 </div>
-
     <!-- Page Content -->
     <div class="container">
 	<?php 
@@ -40,15 +40,16 @@
       <div class="row">
         <div class="col-lg-6">
           <h2>Technology Used</h2>
-          <p>Current technology features are commonly included in JLK projects:</p>
+          <p>Current technology features that are commonly included in JLK projects:</p>
           <ul>
             <li>Simple and powerful front end; usually Bootstrap</li>
             <li>PHP Framework CodeIgniter</li>
             <li>MySQL database</li>
             <li>LAMP Stack (Linux OS, Apache Web Server, MySQL Database, PHP environment)</li>
+            <li>CMS (Content Mangement System) such as Wordpress</li>
           </ul>
-          <p>The above are the mostly used technologies by JLK Consulting. However, it doesn't mean that we will not use alternatives if 
-          customer desires different options.</p>
+          <p>The above are the mostly used technologies by JLK Consulting. However, it doesn't mean that alternatives will not be used if 
+          a customer desires different options.</p>
         </div>
         <div class="col-lg-6">
           <img class="img-fluid rounded" src="<?php echo base_url() ;?>assets/img/app1.jpg" alt="">
@@ -99,7 +100,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="contact">
         <div class="col-lg-8 mb-4">
           <h3>Send JLK a Message</h3>
           <?php echo form_open('public_ctl/msg');?>
@@ -166,7 +167,7 @@
             <div id="success"></div>
             <!-- For success/fail messages -->
             <?php
-        	echo form_submit('submit', ' Send Message', 'class="btn"');
+        	echo form_submit('submit', ' Send Message', 'class="btn btn-primary"');
         	echo form_close();?>
         </div>
       </div>
@@ -186,8 +187,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url() ;?>/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url() ;?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo base_url() ;?>assets/vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url() ;?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
