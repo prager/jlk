@@ -63,10 +63,11 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="http://fair-ball.com"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj1.png" alt=""></a>
+            <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj1.png" alt="">
             <div class="card-body">
               <h4 class="card-title">
-                <a href="http://fair-ball.com">Fair-Ball</a>
+                <?php echo anchor_popup('http://fair-ball.jlkconsulting.info/index.php/Public_ctl', 'Fair-Ball'); ?>
+
               </h4>
               <p class="card-text">Fair-Ball solves the issues of dramas that plague many youth baseball teams.
               It is not only baseball stats program, but using unique formulas also creates ideal team lineups for upcoming games.</p>
@@ -75,10 +76,10 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="http://arrleb.org"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj2.png" alt=""></a>
+            <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj2.png" alt="">
             <div class="card-body">
               <h4 class="card-title">
-                <a href="http://arrleb.org">ARRL EB Section</a>
+                <?php echo anchor_popup('http://arrleb.org', 'ARRL EB Section'); ?>
               </h4>
               <p class="card-text">This is a portal for ARRL Eeast Bay Section that provides information for Ham Radio Amateurs
               in San Francisco East Bay area.</p>
@@ -88,10 +89,10 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="http://birotaryengine.com"><img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj3.png" alt=""></a>
+            <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj3.png" alt="">
             <div class="card-body">
               <h4 class="card-title">
-                <a href="http://birotaryengine.com">Birotary Engine</a>
+                <?php echo anchor_popup('http://birotaryengine.com', 'Birotary Engine'); ?>
               </h4>
               <p class="card-text">Birotary Engine is a unique invention by a brilliant engineer from Czech Republic. It involves
               a true revolution in internal combustion engine designs.</p>
