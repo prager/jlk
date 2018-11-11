@@ -10,6 +10,7 @@
 
     <title>JLK Consulting</title>
 
+	<link rel="icon" type="image/png" sizes="96x96"  href="<?php echo base_url() ;?>/assets/img/ico.png">
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url() ;?>assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
@@ -61,7 +62,7 @@
       <h2>Current Projects</h2>
 
       <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-12 portfolio-item">
           <div class="card h-100">
             <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj1.png" alt="">
             <div class="card-body">
@@ -74,7 +75,7 @@
 		    </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-12 portfolio-item">
           <div class="card h-100">
             <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj2.png" alt="">
             <div class="card-body">
@@ -87,7 +88,7 @@
               </div>
           </div>
         </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="col-md-4 col-sm-12 portfolio-item">
           <div class="card h-100">
             <img class="card-img-top" src="<?php echo base_url() ;?>assets/img/proj3.png" alt="">
             <div class="card-body">
@@ -102,7 +103,7 @@
       </div>
 
       <div class="row" id="contact">
-        <div class="col-lg-8 mb-4">
+        <div class="col-lg-7 mb-3">
           <h3>Send JLK a Message</h3>
           <?php echo form_open('public_ctl/msg');?>
             <div class="control-group form-group">
@@ -171,8 +172,26 @@
         	echo form_submit('submit', ' Send Message', 'class="btn btn-primary"');
         	echo form_close();?>
         </div>
+        <div class="col-lg-5">
+        	<br>
+        	<p>Located in: Concord, CA</p>
+        	<div id="googleMap" style="height: 280px;">&nbsp;</div>
+            <script>
+            function myMap() {
+            var myCenter = new google.maps.LatLng(37.9736091445683, -122.03391736377816);
+            var mapProp = {center:myCenter, zoom:9, scrollwheel:true, draggable:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var marker = new google.maps.Marker(
+              {   position:myCenter,
+                  title:'JLK Consulting, Concord, CA'
+              });
+            marker.setMap(map);
+            }
+            </script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeOLEmQMnt6O2kEXJ7llYr1xw2y-BEm6M&callback=myMap"></script>
+        </div>
       </div>
-
+	<br><br>
     </div>
     <!-- /.container -->
 
