@@ -47,7 +47,7 @@
       <!-- Features Section -->
       <div class="row">
         <div class="col-lg-6">
-          <h2>Technology Used</h2>
+          <h2>Technology</h2>
           <p>Current technology features that are commonly included in JLK projects:</p>
           <ul>
             <li>Simple and powerful front end; usually Bootstrap</li>
