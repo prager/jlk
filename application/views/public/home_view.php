@@ -19,20 +19,27 @@
 
   </head>
 
-   
-    <div class="container">
-      <div class="jumbotron">
-  <h1 class="display-4">JLK Consulting</h1>
+<body> 
+  
+ <!-- <div style="background-color: #D3D3D3; padding-top: 25px; padding-bottom: 25px;"> -->
+ <div class="container fixed-top">
+ <div id="bannerbg">
+ <div class="row">
+ <div class="col-lg-12">
+  <h1>JLK Consulting</h1>
   <p class="lead">Web applications development</p>
   <hr class="my-4">
-  <a href="#contact" class="btn btn-light">Contact the JLK Team</a>
-
+  <!-- <a href="#contact" class="btn btn-light">Contact the JLK Team</a> -->
+</div>  
+</div>
 </div>
 </div>
     <!-- Page Content -->
+    <div style="padding-top: 180px;"></div>
     <div class="container">
 	<?php 
 	if($msg != '') {?>
+	<div class="row">&nbsp;</div>
 	<div class="row">
 	<span style="color: red;"><?php echo $msg; ?></span>
 	</div>

@@ -6,7 +6,7 @@
 
 
 body {
-  padding-top: 24px;
+  padding-top: 0px;
 }
 
 .carousel-item {
@@ -21,4 +21,13 @@ body {
 
 .portfolio-item {
   margin-bottom: 30px;
+}
+
+#bannerbg {
+	/*background-color: #D3D3D3; */
+	padding-top: 25px; 
+	padding-bottom: 25px;
+	background-image: url("http://files.jlkconsulting.info/bg-bl-grad.png");
+	background-repeat: no-repeat;
+    background-size: cover;
 }
