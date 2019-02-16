@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	
+	<meta property="og:title" content="JLK" />
+	<meta property="og:url" content="http://jlkconsulting.info" />
+	<meta property="og:image" content="http://files.kulisek.org/jlk-og.png" />
+	<meta property="og:description" content="Technology Consulting and Web Applications Development" />
+	
     <title>JLK Consulting</title>
 
 	<link rel="icon" type="image/png" sizes="96x96"  href="<?php echo base_url() ;?>/assets/img/ico.png">
