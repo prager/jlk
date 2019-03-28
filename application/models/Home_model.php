@@ -7,19 +7,22 @@ class Home_model extends CI_Model {
 	}
 	public function send_msg($param) {
 		
-		$recipient = 'jank@jlkconsulting.info';
-		$message = "Message from JLK:\n\n Name: " . $param['name'] . "\n\n" . "Phone:\n\n" . $param['phone'] . "\n\n" . 
-		"Message:\n\n" . $param['message'];
-		mail($recipient, 'Msg from JLK', $message);
-		
-		$msg_arr = array(
-				'date' => time(),
-				'name' => $param['name'],
-				'email' => $param['email'],
-				'phone' => $param['phone'],
-				'message' => $param['message']);
-		
-		$this->db->insert('messages', $msg_arr);
+	    if($param['test_email'] == '') {
+	        unset($param['test_email']);
+    	    $recipient = 'jank@jlkconsulting.info';
+    		$message = "Message from JLK:\n\n Name: " . $param['name'] . "\n\n" . "Phone:\n\n" . $param['phone'] . "\n\n" . 
+    		"Message:\n\n" . $param['message'];
+    		mail($recipient, 'Msg from JLK', $message);
+    		
+    		$msg_arr = array(
+    				'date' => time(),
+    				'name' => $param['name'],
+    				'email' => $param['email'],
+    				'phone' => $param['phone'],
+    				'message' => $param['message']);
+    		
+    		$this->db->insert('messages', $msg_arr);
+	    }
 	}
 	
 	public function register($param) {

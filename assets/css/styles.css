@@ -31,3 +31,7 @@ body {
 	background-repeat: no-repeat;
     background-size: cover;
 }
+
+#test_email {
+    display: none;
+}

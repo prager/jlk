@@ -44,10 +44,10 @@
     <div class="container">
 	<?php 
 	if($msg != '') {?>
-	<div class="row">&nbsp;</div>
 	<div class="row">
 	<span style="color: red;"><?php echo $msg; ?></span>
 	</div>
+	<div class="row">&nbsp;</div>
 	<?php }?>
       <!-- Features Section -->
       <div class="row">
@@ -117,7 +117,9 @@
       <div class="row" id="contact">
         <div class="col-lg-7 mb-3">
           <h3>Send JLK a Message</h3>
-          <?php echo form_open('public_ctl/msg');?>
+          <?php 
+            $rand_int = rand(1, 999);
+            echo form_open('public_ctl/msg/' . $rand_int);?>
             <div class="control-group form-group">
               <div class="controls">
                 <?php $name_arr = array(
@@ -163,6 +165,15 @@
                 'required data-validation-required-message' => 'Please, enter your email');?>
           		<span style="color: red;"><?php echo form_error('email'); ?></span>
           		<?php echo form_input($email_arr); ?>
+          		
+          		<?php $email_honey = array(
+				'name'  => 'test_email-' . $rand_int,
+				'id' => 'test_email',
+				'value' => '',
+				'maxlength' => '50',
+				'size' => '50',
+                'class'	=> 'form-control');
+          		echo form_input($email_honey); ?>
 			  </div>
             </div>
             <div class="control-group form-group">

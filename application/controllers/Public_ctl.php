@@ -16,20 +16,14 @@ class Public_ctl extends CI_Controller {
 	     $this->Home_model->send_msg($this->msg_param);
 	     }
 	    $this->load->view('public/home_view', $this->msg);
-	    /*if($this->form_validation->run()) {
-	        $this->Home_model->send_msg($this->msg_param);
-	        $this->load->view('public/home_view', $this->msg);
-	    }
-	    else {
-	        
-	        $this->load->view('public/home_view', $this->msg);
-	    }*/
 	}
 	
 	public function validate_msg() {
+	    $rand_int = $this->uri->segment(3, 0);	    
 	    $param = array();
 	    $param['name'] = $this->input->post('name');
 	    $param['email'] = $this->input->post('email');
+	    $param['test_email'] = $this->input->post('test_email-' . $rand_int);
 	    $param['phone'] = $this->input->post('phone');
 	    $param['message'] = $this->input->post('msg');
 	    
