@@ -206,7 +206,7 @@
             var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
             var marker = new google.maps.Marker(
               {   position:myCenter,
-                  title:'JLK Consulting, Concord, CA'
+                  title:"JLK Consulting \n Concord, CA" 
               });
             marker.setMap(map);
             }
